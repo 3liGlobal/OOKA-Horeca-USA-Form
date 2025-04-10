@@ -3,6 +3,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OOKA&#x20;Horeca&#x20;Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet" type="text/css" />
     <script src="js/validation.js"></script>
   </head>
@@ -35,7 +38,7 @@
         /><!-- If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM -->
         <div class="zf-templateWrapper">
           <!---------template Header Starts Here---------->
-          <ul class="zf-tempHeadBdr">
+          <ul class="zf-tempHeadBdr" style="display: none">
             <li class="zf-tempHeadContBdr">
               <h2 class="zf-frmTitle"><em>OOKA Horeca Form</em></h2>
               <p class="zf-frmDesc"></p>
@@ -46,6 +49,56 @@
           <!---------template Container Starts Here---------->
           <div class="zf-subContWrap zf-topAlign">
             <ul>
+              <!---------Name Starts Here---------->
+              <li class="zf-tempFrmWrapper zf-name zf-namelarge">
+                <label class="zf-labelName" style="display: none">
+                  Contact Name
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv zf-twoType">
+                  <div class="zf-nameWrapper">
+                    <div class="maindiv">
+                      <span class="col1">
+                        <label class="zf-labelName">
+                          First Name
+                          <em class="zf-important">*</em>
+                        </label>
+                        <input
+                          type="text"
+                          maxlength="255"
+                          name="Name_First"
+                          fieldType="7"
+                          placeholder=""
+                        />
+                      </span>
+
+                      <span class="col2">
+                        <label class="zf-labelName">
+                          Last Name
+                          <em class="zf-important">*</em>
+                        </label>
+                        <input
+                          type="text"
+                          maxlength="255"
+                          name="Name_Last"
+                          fieldType="7"
+                          placeholder=""
+                        />
+                      </span>
+                    </div>
+                    <div class="zf-clearBoth"></div>
+                  </div>
+                  <p
+                    id="Name_error"
+                    class="zf-errorMessage"
+                    style="display: none"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <!---------Name Ends Here---------->
               <!---------Single Line Starts Here---------->
               <li class="zf-tempFrmWrapper zf-large">
                 <label class="zf-labelName"> Venue Name </label>
@@ -74,31 +127,34 @@
               <!--address-->
               <!---------Address Starts Here---------->
               <li class="zf-tempFrmWrapper zf-address zf-addrlarge">
-                <label class="zf-labelName"> Venue Address </label>
+                <h2 class="zf-frmTitle">Venue Address</h2>
                 <div class="zf-tempContDiv zf-address">
                   <div class="zf-addrCont">
-                    <span class="zf-addOne">
-                      <input
-                        type="text"
-                        maxlength="255"
-                        name="Address_AddressLine1"
-                        checktype="c1"
-                        placeholder=""
-                      />
-                      <label>Street Address</label>
-                    </span>
-                    <span class="zf-addOne">
-                      <input
-                        type="text"
-                        maxlength="255"
-                        name="Address_AddressLine2"
-                        checktype="c1"
-                        placeholder=""
-                      />
-                      <label>Address Line 2</label>
-                    </span>
+                    <div class="maindiv">
+                      <span class="zf-addOne col1">
+                        <label>Street Address</label>
+                        <input
+                          type="text"
+                          maxlength="255"
+                          name="Address_AddressLine1"
+                          checktype="c1"
+                          placeholder=""
+                        />
+                      </span>
+                      <span class="zf-addOne col1">
+                        <label>Address Line 2</label>
+                        <input
+                          type="text"
+                          maxlength="255"
+                          name="Address_AddressLine2"
+                          checktype="c1"
+                          placeholder=""
+                        />
+                      </span>
+                    </div>
                     <div class="maindiv">
                       <span class="col1">
+                        <label>City</label>
                         <input
                           type="text"
                           maxlength="255"
@@ -107,9 +163,9 @@
                           placeholder=""
                           class="inner"
                         />
-                        <label>City</label>
                       </span>
                       <span class="col2">
+                        <label>State&#x2f;Region&#x2f;Province</label>
                         <input
                           type="text"
                           maxlength="255"
@@ -118,11 +174,11 @@
                           placeholder=""
                           class="inner"
                         />
-                        <label>State&#x2f;Region&#x2f;Province</label>
                       </span>
                     </div>
                     <div class="maindiv">
                       <span class="col1">
+                        <label>Postal &#x2f; Zip Code</label>
                         <input
                           type="text"
                           maxlength="255"
@@ -131,15 +187,15 @@
                           placeholder=""
                           class="inner"
                         />
-                        <label>Postal &#x2f; Zip Code</label>
                       </span>
                       <span class="col2">
+                        <label>Country</label>
                         <select
-                          class="zf-form-sBox inner"
+                          class="zf-form-sBox"
                           name="Address_Country"
                           checktype="c1"
                         >
-                          <option value="-Select-">-Select-</option>
+                          <option value="-Select-">Select</option>
                           <option>&Aring;land Islands</option>
                           <option>Afghanistan</option>
                           <option>Akrotiri</option>
@@ -413,7 +469,6 @@
                           <option>Zambia</option>
                           <option>Zimbabwe</option>
                         </select>
-                        <label>Country</label>
                       </span>
                     </div>
                     <div class="zf-clearBoth"></div>
@@ -429,48 +484,6 @@
                 <div class="zf-eclearBoth"></div>
               </li>
               <!---------Address Ends Here---------->
-              <!---------Name Starts Here---------->
-              <li class="zf-tempFrmWrapper zf-name zf-namelarge">
-                <label class="zf-labelName">
-                  Contact Name
-                  <em class="zf-important">*</em>
-                </label>
-                <div class="zf-tempContDiv zf-twoType">
-                  <div class="zf-nameWrapper">
-                    <span>
-                      <input
-                        type="text"
-                        maxlength="255"
-                        name="Name_First"
-                        fieldType="7"
-                        placeholder=""
-                      />
-                      <label>First Name</label>
-                    </span>
-
-                    <span>
-                      <input
-                        type="text"
-                        maxlength="255"
-                        name="Name_Last"
-                        fieldType="7"
-                        placeholder=""
-                      />
-                      <label>Last Name</label>
-                    </span>
-                    <div class="zf-clearBoth"></div>
-                  </div>
-                  <p
-                    id="Name_error"
-                    class="zf-errorMessage"
-                    style="display: none"
-                  >
-                    Invalid value
-                  </p>
-                </div>
-                <div class="zf-clearBoth"></div>
-              </li>
-              <!---------Name Ends Here---------->
               <!---------Single Line Starts Here---------->
               <li class="zf-tempFrmWrapper zf-large">
                 <label class="zf-labelName">
@@ -535,7 +548,7 @@
               <!---------Phone Ends Here---------->
               <!---------Single Line Starts Here---------->
               <li class="zf-tempFrmWrapper zf-large">
-                <label class="zf-labelName"> Best time to contact </label>
+                <label class="zf-labelName"> Best Time To Contact </label>
                 <div class="zf-tempContDiv">
                   <span>
                     <input
@@ -559,7 +572,7 @@
               </li>
               <!---------Single Line Ends Here---------->
               <!---------Single Line Starts Here---------->
-              <li class="zf-tempFrmWrapper zf-large" style="display: none;">
+              <li class="zf-tempFrmWrapper zf-large" style="display: none">
                 <label class="zf-labelName"> Business unit </label>
                 <div class="zf-tempContDiv">
                   <span>
@@ -584,7 +597,7 @@
               </li>
               <!---------Single Line Ends Here---------->
               <!---------Single Line Starts Here---------->
-              <li class="zf-tempFrmWrapper zf-large" style="display: none;">
+              <li class="zf-tempFrmWrapper zf-large" style="display: none">
                 <label class="zf-labelName"> Source </label>
                 <div class="zf-tempContDiv">
                   <span>
@@ -609,7 +622,7 @@
               </li>
               <!---------Single Line Ends Here---------->
               <!---------Single Line Starts Here---------->
-              <li class="zf-tempFrmWrapper zf-large" style="display: none;">
+              <li class="zf-tempFrmWrapper zf-large" style="display: none">
                 <label class="zf-labelName"> Industry </label>
                 <div class="zf-tempContDiv">
                   <span>
@@ -638,7 +651,7 @@
           <!---------template Container Starts Here---------->
           <ul>
             <li class="zf-fmFooter">
-              <button class="zf-submitColor">Submit</button>
+              <button class="zf-submitColor btn">Submit</button>
             </li>
           </ul>
         </div>
