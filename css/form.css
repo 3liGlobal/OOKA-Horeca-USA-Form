@@ -80,7 +80,12 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url('//Fonts/BrandonGrotesque-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   background-attachment: fixed;
   color: #444444;
