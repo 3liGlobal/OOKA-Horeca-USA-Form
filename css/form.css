@@ -102,7 +102,7 @@ body {
   margin: 0 auto;
   border: 1px solid #EBEBED;
   border-radius: 24px;
-  padding: 0px 3rem;
+  padding: 3rem;
 }
 
 input,
@@ -204,27 +204,11 @@ ul {
   padding: 0 3px;
 }
 
-/* .zf-backgroundBg {
-  background: #f5f5f5;
-} */
-
-.zf-templateWidth {
-  margin: 1% auto;
-}
 
 .zf-templateWidth {
   width: 100%;
 }
 
-/* .zf-templateWrapper {
-  background: #fff;
-  -webkit-box-shadow: 0 0px 3px #e1e1e1;
-  -moz-box-shadow: 0 0px 3px #e1e1e1;
-  box-shadow: 0 0px 3px #e1e1e1;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-} */
 
 .zf-tempContDiv input[type="text"],
 .zf-tempContDiv textarea,
@@ -341,7 +325,7 @@ select:focus-visible {
 }
 
 .zf-tempFrmWrapper {
-  padding: 12px 0px;
+  padding: 0 0 12px;
   margin: 1px 0;
   list-style: none;
 }
@@ -476,7 +460,7 @@ select:focus-visible {
 .zf-address .zf-tempContDiv .zf-addOne,
 .zf-geolocation .zf-tempContDiv .zf-addOne {
   float: none;
-  padding-bottom: 15px;
+  padding-bottom: 12px;
   margin-right: 0;
 }
 
