@@ -125,8 +125,8 @@ img,
 a {
   border: 0px;
   outline: none;
-  color: #3a6cae;
-  text-decoration: none;
+  text-decoration: underline;
+  color: #6c6d73;
 }
 
 img,
@@ -1177,6 +1177,7 @@ select {
 
 .zf-descFld a {
   text-decoration: underline;
+  color: #6c6d73;
 }
 
 .zf-descFld em {
