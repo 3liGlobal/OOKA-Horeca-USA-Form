@@ -106,7 +106,7 @@ body {
 }
 
 input,
-input[type="text"],
+input[type="text"] , input[type="email"],
 input[type="search"],
 isindex,
 textarea,
@@ -210,7 +210,7 @@ ul {
 }
 
 
-.zf-tempContDiv input[type="text"],
+.zf-tempContDiv input[type="text"] , input[type="email"],
 .zf-tempContDiv textarea,
 .zf-tempContDiv .zf-pdfTextArea {
   background: #fff;
@@ -223,12 +223,12 @@ ul {
   width: 100%;
 }
 
-.zf-tempContDiv input[type="text"]:hover,
+.zf-tempContDiv input[type="text"]:hover , input[type="email"]:hover,
 .zf-tempContDiv textarea:hover {
   border: 1px solid rgba(157, 157, 157, 0.75) !important;
 }
 
-.zf-tempContDiv input[type="text"]:focus,
+.zf-tempContDiv input[type="text"]:focus , input[type="email"]:focus,
 .zf-tempContDiv textarea:focus {
   border: 1px solid rgb(0 0 0 / 75%) !important;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) !important;
@@ -370,7 +370,7 @@ select:focus-visible {
   padding-top: 3px;
 }
 
-.zf-name .zf-tempContDiv input[type="text"] {
+.zf-name .zf-tempContDiv input[type="text"] , input[type="email"] {
   width: 100%;
 }
 
@@ -741,7 +741,7 @@ select:focus-visible {
 
 /****************Field Small/Medium/Large Starts Here****************/
 
-.zf-small .zf-tempContDiv input[type="text"],
+.zf-small .zf-tempContDiv input[type="text"] , input[type="email"],
 .zf-small .zf-tempContDiv textarea,
 .zf-small .zf-mSelect select,
 .zf-small .zf-tempContDiv .zf-sliderCont,
@@ -750,7 +750,7 @@ select:focus-visible {
   width: 50%;
 }
 
-.zf-medium .zf-tempContDiv input[type="text"],
+.zf-medium .zf-tempContDiv input[type="text"] , input[type="email"],
 .zf-medium .zf-tempContDiv textarea,
 .zf-medium .zf-mSelect select,
 .zf-medium .zf-tempContDiv .zf-sliderCont,
@@ -759,7 +759,7 @@ select:focus-visible {
   width: 75%;
 }
 
-.zf-large .zf-tempContDiv input[type="text"],
+.zf-large .zf-tempContDiv input[type="text"] , input[type="email"],
 .zf-large .zf-tempContDiv textarea,
 .zf-large .zf-mSelect select,
 .zf-large .zf-tempContDiv .zf-sliderCont,
@@ -953,27 +953,27 @@ select {
   margin-left: 0 !important;
 }
 
-.zf-csmall .zf-tempContDiv input[type="text"] {
+.zf-csmall .zf-tempContDiv input[type="text"] , input[type="email"] {
   width: 43%;
 }
 
-.zf-cmedium .zf-tempContDiv input[type="text"] {
+.zf-cmedium .zf-tempContDiv input[type="text"] , input[type="email"] {
   width: 67%;
 }
 
-.zf-clarge .zf-tempContDiv input[type="text"] {
+.zf-clarge .zf-tempContDiv input[type="text"] , input[type="email"] {
   width: 91%;
 }
 
-.zf-nsmall .zf-tempContDiv input[type="text"] {
+.zf-nsmall .zf-tempContDiv input[type="text"] , input[type="email"] {
   width: 50%;
 }
 
-.zf-nmedium .zf-tempContDiv input[type="text"] {
+.zf-nmedium .zf-tempContDiv input[type="text"] , input[type="email"] {
   width: 75%;
 }
 
-.zf-nlarge .zf-tempContDiv input[type="text"] {
+.zf-nlarge .zf-tempContDiv input[type="text"] , input[type="email"] {
   width: 100%;
 }
 
@@ -1155,8 +1155,8 @@ select {
   margin-top: 2px;
 }
 
-.zf-medium .zf-phonefld input[type="text"],
-.zf-small .zf-phonefld input[type="text"] {
+.zf-medium .zf-phonefld input[type="text"] , input[type="email"],
+.zf-small .zf-phonefld input[type="text"] , input[type="email"] {
   width: 100%;
 }
 
@@ -1351,7 +1351,7 @@ span.col2 {
     margin: 20px;
   }
 
-  .zf-tempContDiv input[type="text"],
+  .zf-tempContDiv input[type="text"] , input[type="email"],
   .zf-tempContDiv textarea,
   .zf-tempContDiv .zf-pdfTextArea {
     padding: 16px;
