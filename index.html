@@ -154,21 +154,20 @@
 
                           <span class="col2">
                             <label class="zf-labelName">
-                              Email
-                              <em class="zf-important">*</em>
+                              Business Type
+                              
                             </label>
-                            <input
-                              type="email"                    
-                              maxlength="255"
-                              name="Email"
-                              checktype="c6"
-                              fieldType="9"
-                              placeholder=""
-                            />
-                            <p id="Email_error" class="zf-errorMessage" style="display: none">
-                              Invalid email address
-                            </p>
+                          
+                            <div class="zf-tempContDiv">
+                                <select class="zf-form-sBox" name="Dropdown" checktype="c1">
+                                    <option selected="true" value="-Select-">Select</option>
+                                    <option value="Retail">Retail</option>
+                                    <option value="Lounge">Lounge</option>
+                                </select>
+                                <p id="Dropdown_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
+                            </div>
                           </span>
+                          
                         </div>
                         <div class="zf-clearBoth"></div>
                       </div>
@@ -590,6 +589,25 @@
               </li>
               <!---------Single Line Ends Here---------->
               <!---------Phone Starts Here---------->
+              <div class="zf-tempFrmWrapper  zf-large "><label class="zf-labelName">
+                               Email
+                               <em class="zf-important">*</em>
+                            </label>
+                            <div class="zf-tempContDiv">
+                                  <input
+                              type="email"                    
+                              maxlength="255"
+                              name="Email"
+                              checktype="c6"
+                              fieldType="9"
+                              placeholder=""
+                            />
+                            <p id="Email_error" class="zf-errorMessage" style="display: none">
+                              Invalid email address
+                            </p>
+                            </div>
+                            <div class="zf-clearBoth"></div>
+                        </div>
               <li class="zf-tempFrmWrapper zf-large">
                 <label class="zf-labelName"> Phone Number </label>
                 <div class="zf-tempContDiv zf-phonefld">
@@ -648,6 +666,17 @@
                 </div>
                 <div class="zf-clearBoth"></div>
               </li>
+              <div class="zf-tempFrmWrapper  zf-large "><label class="zf-labelName">
+                                What kind of support you would like from OOKA?
+                            </label>
+                            <div class="zf-tempContDiv">
+                                <span>
+                                    <textarea name="MultiLine" checktype="c1" maxlength="65535"
+                                        placeholder=""></textarea> </span>
+                                <p id="MultiLine_error" class="zf-errorMessage" style="display: none;">Invalid value</p>
+                            </div>
+                            <div class="zf-clearBoth"></div>
+                        </div>
               <!---------Single Line Ends Here---------->
               <!---------Single Line Starts Here---------->
               <li class="zf-tempFrmWrapper zf-large" style="display: none">
