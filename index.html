@@ -767,31 +767,34 @@ console.log("Zoho form view event pushed!");
 
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-  var form = document.getElementById("form"); // using the actual id="form"
-  console.log("Zoho form submit event pushed 1!");
+document.addEventListener("DOMContentLoaded", function () {
+  var form = document.getElementById("form");
+  if (!form) return;
 
-  if (form) {
-    // Save Zoho's original handler
-    var originalOnSubmit = form.onsubmit;
-    console.log("Zoho form submit event pushed2!");
+  form.addEventListener("submit", function (e) {
+    if (form.dataset.gtmFired === "1") return;
 
-    form.onsubmit = function (e) {
-      // Push to dataLayer FIRST
-      console.log("Zoho form submit event pushed! 3");
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        'event': 'zf_formsubmit',
-        'zf_category': 'Zoho Forms',
-        'zf_action': 'Submit Form',
-        'zf_formname': 'ooka us horeca webform'
-      });
-      console.log("Zoho form submit event pushed!4");
+    if (typeof zf_ValidateAndSubmit === "function" && !zf_ValidateAndSubmit()) {
+      e.preventDefault();
+      return;
+    }
 
-      // Then submit the form
-      form.submit();
-    };
-  }
+    e.preventDefault();
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'zf_formsubmit',
+      zf_category: 'Zoho Forms',
+      zf_action: 'Submit Form',
+      zf_formname: 'ooka us horeca webform',
+      eventCallback: function () {
+        if (form.dataset.gtmFired === "1") return;
+        form.dataset.gtmFired = "1";
+        form.submit();
+      },
+      eventTimeout: 2000
+    });
+  }, true);
 });
 </script>
   </body>
