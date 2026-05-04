@@ -1,5 +1,15 @@
 <html>
   <head>
+    <!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id=GTM-MDSWBSMD'+dl;
+f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MDSWBSMD');
+</script>
+<!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OOKA&#x20;Horeca&#x20;Form</title>
@@ -14,6 +24,11 @@
   </head>
   <body class="zf-backgroundBg">
     <!-- Change or deletion of the name attributes in the input tag will lead to empty values on record submission-->
+      <!-- Google Tag Manager (noscript) -->
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDSWBSMD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
     <div class="zf-templateWidth">
       <form
         action="https://forms.zohopublic.com/airglobal/form/OOKAHorecaForm/formperma/pMITcKEny-VmgrumsKfq7XSLp7l6gIeuahBIvFLKyU4/htmlRecords/submit"
@@ -735,5 +750,49 @@
       var isSalesIQIntegrationEnabled = false;
       var salesIQFieldsArray = [];
     </script>
+    <script>
+window.dataLayer = window.dataLayer || [];
+
+// Push form view event on page load
+window.dataLayer.push({
+  'event': 'zf_formview',
+  'zf_category': 'Zoho Forms',
+  'zf_action': 'Form View',
+  'zf_formname': 'ooka us horeca webform'
+});
+
+console.log("Zoho form view event pushed!");
+</script>
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+  var form = document.getElementById("form"); // using the actual id="form"
+  console.log("Zoho form submit event pushed 1!");
+
+  if (form) {
+    // Save Zoho's original handler
+    var originalOnSubmit = form.onsubmit;
+    console.log("Zoho form submit event pushed2!");
+
+    form.onsubmit = function (e) {
+      // Push to dataLayer FIRST
+      console.log("Zoho form submit event pushed! 3");
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'event': 'zf_formsubmit',
+        'zf_category': 'Zoho Forms',
+        'zf_action': 'Submit Form',
+        'zf_formname': 'ooka us horeca webform'
+      });
+      console.log("Zoho form submit event pushed!4");
+
+      // Then submit the form
+      form.submit();
+    };
+  }
+});
+</script>
   </body>
 </html>
