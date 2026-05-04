@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ping -n 2 github.com)",
+      "Bash(ping -n 2 8.8.8.8)"
+    ]
+  }
+}
